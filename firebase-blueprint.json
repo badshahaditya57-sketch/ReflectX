@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User account profile for reflection data isolation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "lastActiveAt": { "type": "string" }
+      },
+      "required": ["id", "createdAt"]
+    },
+    "JournalEntry": {
+      "title": "JournalEntry",
+      "description": "A user reflection page or journal entry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "mood": { "type": "string" },
+        "date": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "companionReflection": { "type": "string" },
+        "wordCount": { "type": "number" }
+      },
+      "required": ["id", "userId", "title", "content", "mood", "date"]
+    },
+    "ChatSession": {
+      "title": "ChatSession",
+      "description": "A reflection dialogue exchange with the companion",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "messages": { "type": "array" },
+        "selectedEmotion": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "messages", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile document"
+    },
+    "/users/{userId}/journalEntries/{entryId}": {
+      "schema": "JournalEntry",
+      "description": "Personal reflection journal pages belonging to the authenticated user"
+    },
+    "/users/{userId}/chatSessions/{sessionId}": {
+      "schema": "ChatSession",
+      "description": "Personal dialogue sessions with the reflection companion"
+    }
+  }
+}

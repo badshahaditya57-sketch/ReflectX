@@ -1,0 +1,6 @@
+{
+  "name": "Reflection Companion & Journal",
+  "description": "An insightful, empathetic reflection companion and mindful journaling partner to deepen self-awareness, explore emotions, and gain clarity through grounded Socratic dialogue.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
