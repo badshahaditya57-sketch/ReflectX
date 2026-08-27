@@ -1,4 +1,4 @@
-# Solace — Empathetic Reflection Companion & Journaling Partner
+# ReflectX — Empathetic Reflection Companion & Journaling Partner
 
 An insightful, empathetic reflection companion and mindful journaling partner built to help individuals deepen self-awareness, explore emotions, process complex thoughts, and gain internal clarity. Rather than offering unsolicited advice, preachiness, or diagnostic therapy, the companion acts as a grounded mirror and Socratic guide.
 
